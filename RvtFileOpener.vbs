@@ -42,7 +42,8 @@ Set fso = CreateObject("Scripting.FileSystemObject")
     ' Launching Revit and Opening File
     Dim WshShell
     Set WshShell = WScript.CreateObject("WScript.Shell")
-    WshShell.Run RevitEXE & " " & destinationFile
-    Set WsShell = Nothing
+    WshShell.Run "%comspec% /k" & RevitEXE & " " & destinationFile & " -R", 1, True
+
+    Set WshShell = Nothing
 
 Set fso = Nothing
