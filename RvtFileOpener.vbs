@@ -43,5 +43,6 @@ Set fso = CreateObject("Scripting.FileSystemObject")
     Dim WshShell
     Set WshShell = WScript.CreateObject("WScript.Shell")
     WshShell.Run RevitEXE & " " & destinationFile
+    Set WsShell = Nothing
 
 Set fso = Nothing
